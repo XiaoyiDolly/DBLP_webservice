@@ -1,0 +1,3 @@
+[submodule "DBLP_webservice"]
+	path = DBLP_webservice
+	url = https://github.com/XiaoyiDolly/DBLP_webservice.git
