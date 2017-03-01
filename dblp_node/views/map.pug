@@ -1,0 +1,35 @@
+doctype html
+html
+  head
+    title= title  
+    style.
+      html, body {
+      height: 100%;
+      margin: 10;
+      padding: 10;
+      }
+      #map {
+      height: 50%;
+      } 
+ 
+  body
+    h1 Map Visualization of Conference Locations
+    div 
+      form
+        div.input
+            span.label Input a conference name: 
+            input(type="text", id="conf.name" value='icws')
+        div.input
+            span.label Input a start year: 
+            input(type="text", id='start_year' value='2010')
+        div.input
+            span.label Input an end year: 
+            input(type="text", id='end_year' value='2015')
+        button(onclick="conf(); return false;" ) Submit
+        pre(id="result")
+      
+    #map
+
+    script(src='https://maps.googleapis.com/maps/api/js?key=AIzaSyDZXuKrEQDVS59KCWYXxWkUY_XupadGrHo&callback=initMap', async='', defer='')
+    script(src="/js/map.js")
+    script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js")

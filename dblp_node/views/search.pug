@@ -1,0 +1,32 @@
+html
+  head
+    title= title     
+  body
+    h1= message
+    ol
+      li Keyword search with full-text lucene index:
+        form Input query parameters: 
+          p keywords: 
+          input(type='text' id='keywords1' value='services computing')
+          p skip: 
+          input(type='text' id='skip1' value='10')
+          p limit: 
+          input(type='text' id='return1' value='20')
+          button(onclick="basicSearch(); return false;" ) Submit
+          pre(id="basicSearch.json")
+      li Spatial search with index on year:
+        form Input keywords of author name or paper title: 
+          p keywords: 
+          input(type='text' id='keywords2' value='services computing')
+          p begin year:
+          input(type='text' id='yearFrom' value='2001')
+          p end year:
+          input(type='text' id='yearTo' value='2005')
+          p skip:
+          input(type='text' id='skip2' value='10')
+          p limit:
+          input(type='text' id='return2' value='20')
+          button(onclick="spatialSearch(); return false;" ) Submit
+          pre(id="spatialSearch.json")
+      script(src="/js/search.js")
+      script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js")
